@@ -1,5 +1,5 @@
 <p align="center">
-	<img src="src/assets/logo.svg" width="256" align="center">
+	<img src="src/assets/logo.svg" width="128" align="center">
 </p>
 <h1 align="center">Chameleon</h1>
 <p align="center">Script to resolve the master mind game</p>
@@ -24,5 +24,5 @@
 - Chameleon only works in easy difficulty for now
 
 ## Thanks
-The logo made by [Game-icons](https://www.game-icons.net)
-The master mind game made by [Amauryh24](https://github.com/Amauryh24)
+- The logo made by [Game-icons](https://www.game-icons.net)
+- The master mind game made by [Amauryh24](https://github.com/Amauryh24)
