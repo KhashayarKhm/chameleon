@@ -1,0 +1,55 @@
+@tailwind utilities;
+@import 'animate.css';
+
+#chameleon-container {
+	@apply box-border absolute left-2.5 top-2.5 p-3 w-80 h-20;
+	@apply grid grid-cols-12 grid-rows-1 items-center justify-items-start;
+	@apply bg-[#3E065F] rounded-md shadow-lg;
+	border: 2px solid #8E05C2;
+}
+
+.btn-ping {
+	@apply self-center right-3 absolute opacity-75;
+	animation-name: ping;
+}
+
+.btn-ping, .decode-btn {
+	@apply bg-[#700B97] rounded-md w-24 h-10;
+}
+
+.decode-btn {
+	@apply col-span-8 justify-self-end row-span-1;
+	@apply border-[#8E05C2] font-bold uppercase cursor-pointer;
+	@apply transition hover:bg-[#3F085E] hover:text-[#8E05C2];
+	z-index: 1;
+}
+
+.logo {
+	@apply row-span-1 col-span-3 w-12 h-12;
+}
+
+.version {
+	@apply row-span-1 text-sm text-[#8E05C2] col-span-1 font-bold;
+}
+
+.animate__customFadeOutDown {
+	animation-name: customFadeOutDown ;
+}
+
+@keyframes customFadeOutDown {
+	from {
+		opacity: 1;
+		transform: translate3d(-50%, -50%, 0);
+	}
+	to {
+		opacity: 0;
+		transform: translate3d(-50%, 0, 0);
+	}
+}
+
+@keyframes ping {
+	75%, 100% {
+		transform: scale(1.3);
+		opacity: 0;
+	}
+}
