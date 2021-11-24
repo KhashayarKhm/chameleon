@@ -1,3 +1,3 @@
 [submodule "MasterMind"]
-	path = MasterMind
+	path = docs/MasterMind
 	url = https://github.com/Amauryh24/MasterMind.git
