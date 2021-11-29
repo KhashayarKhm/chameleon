@@ -1,0 +1,123 @@
+@font-face {
+		font-family: 'ModeNine';
+		src: url('../assets/font/ModeNine.eot');
+		src: url('../assets/font/ModeNine.eot?#iefix') format('embedded-opentype'),
+				url('../assets/font/ModeNine.woff2') format('woff2'),
+				url('../assets/font/ModeNine.woff') format('woff'),
+				url('../assets/font/ModeNine.ttf') format('truetype'),
+				url('../assets/font/ModeNine.svg#ModeNine') format('svg');
+		font-weight: normal;
+		font-style: normal;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html, body {
+	width: 100vw;
+	height: 100vh;
+}
+
+html {
+	font-family: "ModeNine";
+	line-height: 24px;
+	background: #8d05c2;/* Old Browsers */
+	background: -moz-linear-gradient(-45deg, #8d05c2 0%, #6f0b97 24%, #3e065f 63%, #000000 100%); /* FF3.6+ */
+	background: -webkit-gradient(left top, right bottom, color-stop(0%, #8d05c2), color-stop(24%, #6f0b97), color-stop(63%, #3e065f), color-stop(100%, #000000));/* Chrome, Safari4+ */
+	background: -webkit-linear-gradient(-45deg, #8d05c2 0%, #6f0b97 24%, #3e065f 63%, #000000 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(-45deg, #8d05c2 0%, #6f0b97 24%, #3e065f 63%, #000000 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(-45deg, #8d05c2 0%, #6f0b97 24%, #3e065f 63%, #000000 100%); /* IE 10+ */
+	background: linear-gradient(135deg, #8d05c2 0%, #6f0b97 24%, #3e065f 63%, #000000 100%);/* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8d05c2', endColorstr='#000000', GradientType=1 );/* IE6-9 fallback on horizontal gradient */
+}
+
+body {
+	font-size: 1em;
+	line-height: 1.5em;
+	color: #F7B2AD;
+}
+
+a {
+	color: #F7B2AD;
+}
+
+a:hover {
+	color: #FCA311;
+}
+
+.header {
+	display: grid;
+	grid-template-columns: 100%;
+	grid-template-rows: 150px 30px 30px;
+	align-items: center;
+	justify-items: center;
+	padding: 8px;
+	margin-bottom: 48px;
+}
+
+.header > .logo {
+	width: 128px;
+}
+
+.header > .name,
+.header > .desc {
+	width: 100%;
+	text-align: center;
+}
+
+.warnings, .games {
+	padding: 8px;
+}
+
+.warnings h2, .games h2 {
+	text-transform: uppercase;
+}
+
+.warnings ul, .games ul {
+	list-style: ">> ";
+	padding-left: 64px;
+	margin-top: 16px;
+}
+
+.divider {
+	width: 80%;
+	margin: 24px auto;
+	border: none;
+	border-top: 2px dotted #F7B2AD;
+}
+
+@media only screen and (min-width: 540px) {
+	.header {
+		grid-template-rows: 50% 50%;
+		grid-template-columns: 128px calc(100% - 128px);
+		justify-items: start;
+	}
+
+	.header > .logo {
+		grid-column-start: 1;
+		grid-column-end: 2;
+		grid-row-start: 1;
+		grid-row-end: 3;
+	}
+
+	.header > .name {
+		align-self: center;
+		grid-column-start: 2;
+		grid-column-end: 3;
+		grid-row-start: 1;
+		grid-row-end: 2;
+		width: 400px;
+	}
+
+	.header > .desc {
+		align-self: center;
+		grid-column-start: 2;
+		grid-column-end: 3;
+		grid-row-start: 2;
+		grid-row-end: 3;
+		width: 400px;
+	}
+}

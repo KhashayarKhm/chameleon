@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="author" content="Amaury Henrottay" />
+    <meta name="description" content="MasterMind Game " />
+    <meta name="keywords" content="js, mastermind, game" />
+
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <title>Chameleon-MasterMind-Amaury24</title>
+    <link rel="icon" href="../assets/logo.svg">
+  </head>
+  <body onload="masterMind.initialise()">
+    <h1>MasterMind</h1>
+    <section class="wrap-instructions">
+      <p>
+        <span class="help">See Instructions</span>
+        <span class="infobulle"
+          >Each guess is made by placing a row of code colors on the decoding
+          board. Once placed, you have feedback in the small holes. Green
+          indicator is placed for each code guess which is correct in both color
+          and position White indicator is placed for each code guess which is
+          correct color.</span
+        >
+      </p>
+    </section>
+    <section class="wrap-game">
+      <ul id="codeSoluce" class="code-Soluce"></ul>
+      <ul id="board"></ul>
+      <ul id="colorOptions" class="color-Options"></ul>
+    </section>
+    <div id="modal" class="wrap-modal">
+      <h2 id="modalMessage">You cracked the code</h2>
+      <p>Do you want to play again ?</p>
+      <button id="yes">yes</button>
+      <button id="no">no</button>
+    </div>
+    <section class="wrap-option">
+      <button class="restart" onclick="masterMind.gameReset()">restart</button>
+      <div class="mode">
+        <button class="modeOptions" onclick="masterMind.gameMode('easy')">
+          easy
+        </button>
+        <button class="modeOptions" onclick="masterMind.gameMode('medium')">
+          medium
+        </button>
+        <button class="modeOptions" onclick="masterMind.gameMode('difficult')">
+          difficult
+        </button>
+      </div>
+    </section>
+    <script src="./assets/js/mastermind.js"></script>
+    <script src="../chameleon-source/chameleon.js"></script>
+  </body>
+</html>

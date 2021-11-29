@@ -10,19 +10,22 @@ const isDevMode = process.env.NODE_ENV === 'development';
 
 module.exports = {
 	entry: isDevMode ? {
-		chameleon: './src/main.js',
+		chameleon: path.resolve(__dirname, 'src', 'main.js'),
 		hot: 'webpack/hot/dev-server.js',
 		client: 'webpack-dev-server/client/index.js?hot=true&live-reload=true',
-	} : './src/main.js',
+	} : path.resolve(__dirname, 'src', 'main.js'),
 	output: {
 		filename: isDevMode ? '[name].js' : 'chameleon.js',
 		clean: true,
-		path: path.resolve(__dirname, './dist'),
+		path: path.resolve(__dirname, 'docs', 'chameleon-source'),
 	},
-	mode: 'production',
+	mode: isDevMode ? 'development' : 'production',
 	devtool: 'source-map',
 	devServer: {
-		static: './',
+		static: {
+			directory: path.resolve(__dirname, 'docs'),
+			publicPath: '/chameleon',
+		},
 		hot: false,
 		client: false,
 	},
@@ -63,7 +66,7 @@ module.exports = {
 							postcssOptions: {
 								plugins: [
 									PostcssPresetEnv,
-									Tailwindcss('./tailwind.config.js'),
+									Tailwindcss(path.resolve(__dirname, 'tailwind.config.js')),
 									Autoprefixer,
 								],
 							},

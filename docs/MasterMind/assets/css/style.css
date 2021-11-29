@@ -1,0 +1,295 @@
+body {
+  background-color: #29294a;
+  position: relative;
+  font-size: 16px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+body h1 {
+  font-size: 2em;
+  text-align: center;
+  padding: 1em;
+  color: white;
+}
+
+body .black {
+  background-color: #252525 !important;
+}
+
+body .white {
+  background-color: #ece3e3 !important;
+}
+
+body .red {
+  background-color: #f12d2d !important;
+}
+
+body .orange {
+  background-color: #ff9d0a !important;
+}
+
+body .yellow {
+  background-color: #fff77b !important;
+}
+
+body .blue {
+  background-color: #0396ff !important;
+}
+
+body .wrap-instructions .help {
+  cursor: help;
+  padding: 0.5em;
+  background-color: #50ab89;
+  display: inline-block;
+  -webkit-transform: rotate(1deg);
+          transform: rotate(1deg);
+  position: absolute;
+  top: 8%;
+  left: 47%;
+  -webkit-box-shadow: 3px 3px 10px #50ab89;
+          box-shadow: 3px 3px 10px #50ab89;
+}
+
+body .wrap-instructions p:hover .infobulle {
+  background-color: #3b3b5d;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  max-width: 480px;
+  margin: auto;
+  padding: 1em;
+  border: 3px solid rgba(255, 255, 255, 0.514);
+  color: white;
+  font-size: 1em;
+  line-height: 1.2em;
+}
+
+body .wrap-instructions .infobulle {
+  display: none;
+}
+
+body .wrap-game {
+  max-width: 500px;
+  margin: auto;
+  padding-top: 1em;
+}
+
+body .wrap-game ul#codeSoluce {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1em;
+}
+
+body .wrap-game ul#codeSoluce li {
+  width: 30px;
+  height: 30px;
+  margin: 0.2em;
+  border-radius: 30px;
+  color: white;
+  text-align: center;
+  line-height: 30px;
+  background-color: #3b3b5d;
+}
+
+body .wrap-game ul#board {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+}
+
+body .wrap-game ul#board li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .wrap-game ul#board li span {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin: 0.2em;
+  background-color: #3b3b5d;
+  border-radius: 30px;
+  text-align: center;
+  line-height: 30px;
+  color: white;
+}
+
+body .wrap-game ul#board li span:first-child {
+  background-color: transparent;
+}
+
+body .wrap-game ul#board li .indicator {
+  width: 10px;
+  height: 10px;
+}
+
+body .wrap-game ul#board li .hit {
+  width: 10px;
+  height: 10px;
+  background-color: #00ff0d;
+}
+
+body .wrap-game ul#board li .almost {
+  width: 10px;
+  height: 10px;
+  background-color: #ffffff;
+}
+
+body .wrap-game ul#colorOptions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1em;
+}
+
+body .wrap-game ul#colorOptions li {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin: 0.2em;
+  background-color: #3b3b5d;
+  border-radius: 30px;
+  text-align: center;
+  -webkit-box-shadow: 2px 2px 8px #0606067d;
+          box-shadow: 2px 2px 8px #0606067d;
+}
+
+body .wrap-game ul#colorOptions li:first-child {
+  background: url(../img/arrow-left-solid.svg) no-repeat 50%, #3b3b5d;
+  background-size: 50%;
+}
+
+body .wrap-game ul#colorOptions li:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+body .wrap-game ul#colorOptions li:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+body .wrap-modal {
+  background-color: #3b3b5d;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  padding: 1em;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 60%;
+  border: 3px solid rgba(255, 255, 255, 0.514);
+}
+
+body .wrap-modal #modalMessage {
+  font-size: 2em;
+  line-height: 1.4em;
+  text-align: center;
+}
+
+body .wrap-modal button {
+  width: 50%;
+  margin: 1em auto;
+  padding: 1em;
+  background-color: white;
+  -webkit-box-shadow: 3px 3px 10px rgba(253, 253, 253, 0.486);
+          box-shadow: 3px 3px 10px rgba(253, 253, 253, 0.486);
+  border: none;
+  font-size: 1em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+body .wrap-modal button:hover {
+  -webkit-box-shadow: 3px 3px 10px black;
+          box-shadow: 3px 3px 10px black;
+  background-color: #29294a;
+  color: white;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+body .wrap-modal button:active {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
+body .wrap-option {
+  max-width: 500px;
+  margin: auto;
+}
+
+body .wrap-option button {
+  display: inline-block;
+  width: 30%;
+  padding: 1em;
+  background-color: transparent;
+  border: 2px solid #3b3b5d;
+  border-radius: 30px;
+  font-size: 1em;
+  text-transform: uppercase;
+  color: white;
+  -webkit-box-shadow: 1px 1px 5px #2224237a;
+          box-shadow: 1px 1px 5px #2224237a;
+}
+
+body .wrap-option button:hover {
+  cursor: pointer;
+  background-color: #3b3b5d;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+body .wrap-option button:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+body .wrap-option .restart {
+  display: block;
+  margin: 1em auto;
+}
+
+body .wrap-option .mode {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+/*# sourceMappingURL=style.css.map */
