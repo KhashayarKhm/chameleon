@@ -208,7 +208,7 @@ function init(decodeFunction) {
 				}),
 				renderElement({
 					tagName: 'span',
-					content: 'v1.0.0',
+					content: 'v1.0.1',
 					className: 'version',
 				}),
 				renderElement({

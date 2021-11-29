@@ -1,0 +1,232 @@
+$firstColor: #29294a;
+$secondColor: #3b3b5d;
+
+body {
+  background-color: $firstColor;
+  position: relative;
+  font-size: 16px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  h1 {
+    font-size: 2em;
+    // line-height: 1.6em;
+    text-align: center;
+    padding: 1em;
+    color: white;
+  }
+  .black {
+    background-color: #252525 !important;
+  }
+  .white {
+    background-color: #ece3e3 !important;
+  }
+  .red {
+    background-color: #f12d2d !important;
+  }
+  .orange {
+    background-color: #ff9d0a !important;
+  }
+  .yellow {
+    background-color: #fff77b !important;
+  }
+  .blue {
+    background-color: #0396ff !important;
+  }
+  .wrap-instructions {
+    // position: absolute;
+    // top: 6%;
+    // left: 58%;
+    // width: 50%;
+    .help {
+      cursor: help;
+      padding: 0.5em;
+      background-color: #50ab89;
+      display: inline-block;
+      transform: rotate(1deg);
+      position: absolute;
+      top: 8%;
+      left: 47%;
+      box-shadow: 3px 3px 10px #50ab89;
+    }
+    p:hover .infobulle {
+      background-color: $secondColor;
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      max-width: 480px;
+      margin: auto;
+      padding: 1em;
+      border: 3px solid rgba(255, 255, 255, 0.514);
+
+      color: white;
+      font-size: 1em;
+      line-height: 1.2em;
+    }
+    .infobulle {
+      display: none;
+    }
+  }
+  .wrap-game {
+    max-width: 500px;
+    margin: auto;
+    padding-top: 1em;
+    ul#codeSoluce {
+      display: flex;
+      justify-content: center;
+      padding: 1em;
+      li {
+        width: 30px;
+        height: 30px;
+        margin: 0.2em;
+        border-radius: 30px;
+        color: white;
+        text-align: center;
+        line-height: 30px;
+        background-color: $secondColor;
+      }
+    }
+    ul#board {
+      display: flex;
+      flex-direction: column-reverse;
+      li {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        span {
+          &:first-child {
+            background-color: transparent;
+          }
+          display: inline-block;
+          width: 30px;
+          height: 30px;
+          margin: 0.2em;
+          background-color: $secondColor;
+          border-radius: 30px;
+          text-align: center;
+          line-height: 30px;
+          color: white;
+          // &:nth-child(n + 6) {
+
+          // }
+        }
+        .indicator {
+          width: 10px;
+          height: 10px;
+        }
+        .hit {
+          width: 10px;
+          height: 10px;
+          background-color: #00ff0d;
+        }
+        .almost {
+          width: 10px;
+          height: 10px;
+          background-color: #ffffff;
+        }
+      }
+    }
+    ul#colorOptions {
+      display: flex;
+      justify-content: center;
+      padding: 1em;
+      li {
+        &:first-child {
+          background: url(../img/arrow-left-solid.svg) no-repeat 50%,
+            $secondColor;
+          background-size: 50%;
+        }
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        margin: 0.2em;
+        background-color: $secondColor;
+        border-radius: 30px;
+        text-align: center;
+        box-shadow: 2px 2px 8px #0606067d;
+        &:hover {
+          cursor: pointer;
+          transform: scale(1.1);
+        }
+        &:active {
+          transform: scale(0.9);
+        }
+      }
+    }
+  }
+  .wrap-modal {
+    background-color: $secondColor;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1em;
+    // display: flex;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+    border: 3px solid rgba(255, 255, 255, 0.514);
+    #modalMessage {
+      font-size: 2em;
+      line-height: 1.4em;
+      text-align: center;
+    }
+    button {
+      width: 50%;
+      margin: 1em auto;
+      padding: 1em;
+      background-color: white;
+      box-shadow: 3px 3px 10px rgba(253, 253, 253, 0.486);
+      border: none;
+      font-size: 1em;
+      text-transform: uppercase;
+      cursor: pointer;
+      &:hover {
+        box-shadow: 3px 3px 10px black;
+
+        background-color: $firstColor;
+        color: white;
+        transform: scale(1.05);
+      }
+      &:active {
+        transform: scale(0.95);
+      }
+    }
+  }
+  .wrap-option {
+    max-width: 500px;
+    margin: auto;
+
+    button {
+      display: inline-block;
+      width: 30%;
+      padding: 1em;
+      background-color: transparent;
+      border: 2px solid $secondColor;
+      border-radius: 30px;
+      font-size: 1em;
+      text-transform: uppercase;
+      color: white;
+      box-shadow: 1px 1px 5px #2224237a;
+      &:hover {
+        cursor: pointer;
+        background-color: $secondColor;
+        transform: scale(1.1);
+      }
+      &:active {
+        transform: scale(0.9);
+      }
+    }
+    .restart {
+      display: block;
+      margin: 1em auto;
+    }
+    .mode {
+      display: flex;
+      justify-content: space-around;
+    }
+  }
+}
